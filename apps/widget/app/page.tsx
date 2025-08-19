@@ -7,7 +7,7 @@ export default function Page() {
     isSpeaking,
     isConnected,
     isConnecting,
-    trancript,
+    transcript,
     startCall,
     endCall,
   } = useVapi();
@@ -20,7 +20,7 @@ export default function Page() {
       <p>isConnected: {`${isConnected}`}</p>
       <p>isConnecting: {`${isConnecting}`}</p>
       <p>isSpeaking: {`${isSpeaking}`}</p>
-      <p>{JSON.stringify(trancript, null, 2)}</p>
+      <p>{JSON.stringify(transcript, null, 2)}</p>
     </div>
   );
 }

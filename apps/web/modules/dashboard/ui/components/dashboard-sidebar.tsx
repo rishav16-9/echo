@@ -53,7 +53,7 @@ const configurationItems = [
   },
   {
     title: "Voice Assistant",
-    url: "/plugin/vapi",
+    url: "/plugins/vapi",
     icon: Mic,
   },
 ];
@@ -113,6 +113,10 @@ export const DashboardSidebar = () => {
                   <SidebarMenuButton
                     asChild
                     isActive={isActive(item.url)}
+                    className={cn(
+                      isActive(item.url) &&
+                        "bg-gradient-to-b from-sidebar-primary to-[#0b63f3]! text-sidebar-primary-foreground! hover:to-[#0b63f3]/90!"
+                    )}
                     tooltip={item.title}
                   >
                     <Link href={item.url}>
@@ -135,6 +139,10 @@ export const DashboardSidebar = () => {
                   <SidebarMenuButton
                     asChild
                     isActive={isActive(item.url)}
+                    className={cn(
+                      isActive(item.url) &&
+                        "bg-gradient-to-b from-sidebar-primary to-[#0b63f3]! text-sidebar-primary-foreground! hover:to-[#0b63f3]/90!"
+                    )}
                     tooltip={item.title}
                   >
                     <Link href={item.url}>
@@ -158,6 +166,10 @@ export const DashboardSidebar = () => {
                     asChild
                     isActive={isActive(item.url)}
                     tooltip={item.title}
+                    className={cn(
+                      isActive(item.url) &&
+                        "bg-gradient-to-b from-sidebar-primary to-[#0b63f3]! text-sidebar-primary-foreground! hover:to-[#0b63f3]/90!"
+                    )}
                   >
                     <Link href={item.url}>
                       <item.icon className="size-4" />
@@ -182,8 +194,9 @@ export const DashboardSidebar = () => {
                     "w-full! p-2! hover:bg-sidebar-accent! hover:text-sidebar-accent-foreground! group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2!",
                   userButtonBox:
                     "w-full! flex-row-reverse! justify-end! gap-2! group-data-[collapsible=icon]:justify-center! text-sidebar-foreground!",
-                  userButtonOuterIdentifier: "pl-0! group-data-[collapsible=icon]:hidden!",
-                  avatarBox: "size-4!"
+                  userButtonOuterIdentifier:
+                    "pl-0! group-data-[collapsible=icon]:hidden!",
+                  avatarBox: "size-4!",
                 },
               }}
             />
